@@ -1,0 +1,4 @@
+[core]
+    remote = origin
+['remote "origin"']
+    url = gs://practice-oppe-charged-muse-461217-u9/dvc

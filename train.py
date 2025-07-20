@@ -13,10 +13,12 @@ from feast import FeatureStore
 
 store = FeatureStore(repo_path="Feast/feature_repo")
 # Load dataset
-entity_df = pd.read_csv("data/entity.csv", parse_dates=['event_timestamp'])
+#this part shows error
+entity_df=pd.read_csv("data/entity.csv", parse_dates=['event_timestamp'])
 
 # Retrieve historical features using Feast
 # This gets features at specific points in time for training
+
 df = store.get_historical_features(
     entity_df=entity_df,
     features=store.get_feature_service("feast_model_v1")
